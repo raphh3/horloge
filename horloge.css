@@ -1,0 +1,75 @@
+body {
+  background-color: beige;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.clock {
+  background: #fff url(./img/34139.svg) center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  height: 30em;
+  border-radius: 50px;
+  width: 30em;
+  position: relative;
+  top: 40px;
+  left: 465px;
+}
+
+.clock::after {
+  background: #000;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 3%;
+  height: 3%;
+  z-index: 10%;
+  left: 49.5%;
+  top: 50%;
+}
+
+.minutes-container,
+.hours-container,
+.seconds-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hours {
+  background: #000;
+  height: 10%;
+  left: 49%;
+  position: absolute;
+  top: 40%;
+  transform-origin: bottom center;
+  width: 0.5%;
+}
+
+.minute {
+  background: #000;
+  height: 15%;
+  left: 49.5%;
+  position: absolute;
+  top: 35%;
+  transform-origin: bottom center;
+  width: 0.5%;
+}
+
+.second {
+  background: red;
+  height: 35%;
+  left: 49.5%;
+  position: absolute;
+  top: 20%;
+  transform-origin: 50% 85%;
+  width: 0.5%;
+  z-index: 8;
+}
